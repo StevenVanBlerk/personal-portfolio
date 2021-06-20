@@ -53,8 +53,8 @@ const Home = () => {
         <Center>
           <Typography maxWidth="700px">
             I am a Frontend Developer from Cape Town using JavaScript and React.
-            I have a passion for developing high calibre, interactive, robust
-            websites.
+            I have a passion for developing high calibre, interactive, and
+            robust websites.
           </Typography>
         </Center>
 
