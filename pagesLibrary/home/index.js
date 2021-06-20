@@ -159,7 +159,9 @@ const Home = () => {
 
             <Typography>Cape Town, South Africa</Typography>
             <TestButton>
-              <Typography color={colors.BLACK}>download cv</Typography>
+              <a href="/StevenVanBlerkCV.pdf" download="Steven van Blerk CV">
+                <Typography color={colors.BLACK}>download cv</Typography>
+              </a>
             </TestButton>
           </VContainer>
         </Center>
