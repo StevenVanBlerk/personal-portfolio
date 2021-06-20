@@ -1,26 +1,21 @@
 import { useState } from "react";
-import styled from "styled-components";
 import {
   PageTitle,
   Subtitle,
   Card,
-  FloatOnHoverCard,
   HoveringContainer,
   Typography,
-  CardTitle,
-  CardGrid,
-  CardText,
-  ContentsBar,
   DimensionContainer,
-  BurgerMenu2,
   Center,
+  UnderConstruction,
   PictorialBar,
-  // ScrollToTopButton,
-  StarryContainer,
+  ScrollToTopButton,
+  VContainer,
+  FlowingGrid,
+  CardTitle,
 } from "/components";
-import { TechCard, TestCard, TestButton } from "./styled-components";
-import { colors } from "../../constants/colors";
-import { motion } from "framer-motion";
+import { TechCard, TestButton } from "./styled-components";
+import { colors } from "/constants/colors";
 
 const techStack = [
   { img: "/icons/tech/react.svg", title: "React", years: 2, skill: 5 },
@@ -50,23 +45,19 @@ const techStack = [
 const Home = () => {
   return (
     <>
-      {/* <ScrollToTopButton /> */}
-      {/* <ContentsBar /> */}
-      <PageTitle>Home Page</PageTitle>
+      <ScrollToTopButton />
+      <UnderConstruction />
+      <PageTitle>Steven van Blerk</PageTitle>
       {/* SUMMARY */}
-      <Subtitle>Summary</Subtitle>
-      aaa sheldon's idea: star wars scrolling effect for text (could be timeline)
-      page side navigation thing could be a star constellation instead of a
-      branch
-      <br />
-      <br />
-      Page: Sick ass music (Glass Animals, Oliver Tree, OK:GO, good music
-      videos), youtube API integration demo
-      <TestButton>
-        <CardText color={colors.DARK_CHARCOAL}>LinkedIn</CardText>
-      </TestButton>
       <Center>
-        <DimensionContainer maxWidth="fit-content" margin="auto">
+        <Typography maxWidth="700px">
+          I am a Frontend Developer from Cape Town using JavaScript and React. I
+          have a passion for developing high calibre, interactive, robust
+          websites.
+        </Typography>
+      </Center>
+      <Center>
+        {/* <DimensionContainer maxWidth="fit-content" margin="auto">
           <Card>
             <div>Get In Contact</div>
             <div>https://www.linkedin.com/in/steven-van-blerk/</div>
@@ -77,35 +68,73 @@ const Home = () => {
             <div>Areas of Expertise</div>
             <div>Other Qualities</div>
           </Card>
-        </DimensionContainer>
+        </DimensionContainer> */}
       </Center>
       {/* TECH STACK */}
       <Subtitle color={colors.SMOKE}>Tech Stack</Subtitle>
       <DimensionContainer maxWidth="fit-content" margin="auto">
-        <CardGrid gridGap="10px">
+        <FlowingGrid
+          justifyContent="center"
+          columnMaxWidth="300px"
+          gridGap="1rem"
+          maxColumns="4"
+        >
           {techStack.map((entry, i) => (
-            <TechCard key={i}>
-              <Subtitle color={colors.SMOKE}>{entry.title}</Subtitle>
-              <Center>
-                <HoveringContainer displacement={4} delay={`0.${(i % 3) * 2}`}>
-                  <img src={entry.img} height="60" />
-                </HoveringContainer>
-              </Center>
-              <CardText color={colors.SMOKE}>
-                {entry.years === 1 ? "1 Year" : `${entry.years} Years`}
-              </CardText>
-              <Center>
-                <PictorialBar rating={entry.skill} />
-              </Center>
+            <TechCard key={i} padding="1rem">
+              <VContainer justifyContent="space-evenly" height="100%">
+                <CardTitle color={colors.SMOKE}>{entry.title}</CardTitle>
+                <Center>
+                  <HoveringContainer
+                    displacement={4}
+                    delay={`0.${(i % 4) * 2}`}
+                  >
+                    <img src={entry.img} height="60" />
+                  </HoveringContainer>
+                </Center>
+                <Typography color={colors.SMOKE}>
+                  {entry.years === 1 ? "1 Year" : `${entry.years} Years`}
+                </Typography>
+                <Center>
+                  <PictorialBar rating={entry.skill} />
+                </Center>
+              </VContainer>
             </TechCard>
           ))}
-        </CardGrid>
+        </FlowingGrid>
       </DimensionContainer>
       {/* GET IN TOUCH */}
-      <Subtitle>Get In Touch</Subtitle>
-      <button>download cv</button>
+
+      <Center margin="1.5rem auto">
+        <VContainer gridGap="0.5rem">
+          <Subtitle>Get In Touch</Subtitle>
+          <a href="www.linkedin.com/in/steven-van-blerk">
+            <Typography textDecoration="underline">
+              www.linkedin.com/in/steven-van-blerk
+            </Typography>
+          </a>
+          <a href="mailto:stevenvanblerkrsa@gmail.com">
+            <Typography textDecoration="underline">
+              stevenvanblerkrsa@gmail.com
+            </Typography>
+          </a>
+          <Typography>Mobile: +27 76 885 4323</Typography>
+
+          <Typography>Cape Town, South Africa</Typography>
+          <TestButton>
+            <Typography color={colors.BLACK}>download cv</Typography>
+          </TestButton>
+        </VContainer>
+      </Center>
     </>
   );
 };
 
 export default Home;
+
+/* sheldon's idea: star wars scrolling effect for text (could be timeline)
+      page side navigation thing could be a star constellation instead of a
+      branch
+      <br />
+      <br />
+      Page: Sick ass music (Glass Animals, Oliver Tree, OK:GO, good music
+      videos), youtube API integration demo */
