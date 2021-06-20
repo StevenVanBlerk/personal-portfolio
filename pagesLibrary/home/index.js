@@ -145,7 +145,10 @@ const Home = () => {
         <Center margin="1.5rem auto">
           <VContainer gridGap="0.5rem">
             <Subtitle>Get In Touch</Subtitle>
-            <a href="www.linkedin.com/in/steven-van-blerk">
+            <a
+              href="https://www.linkedin.com/in/steven-van-blerk"
+              target="_blank"
+            >
               <Typography textDecoration="underline">
                 www.linkedin.com/in/steven-van-blerk
               </Typography>
