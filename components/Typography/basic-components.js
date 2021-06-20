@@ -27,6 +27,7 @@ export const Typography = styled.p`
   text-transform: ${({ textTransform }) => textTransform};
   text-align: ${({ textAlign }) => textAlign};
   text-shadow: ${({ textShadow }) => textShadow};
+  font-style: ${({ fontStyle }) => fontStyle};
 
   transform: ${({ transform }) => transform};
   transition: ${({ transition }) => transition};

@@ -47,84 +47,123 @@ const Home = () => {
     <>
       <ScrollToTopButton />
       <UnderConstruction />
-      <PageTitle>Steven van Blerk</PageTitle>
-      {/* SUMMARY */}
-      <Center>
-        <Typography maxWidth="700px">
-          I am a Frontend Developer from Cape Town using JavaScript and React. I
-          have a passion for developing high calibre, interactive, robust
-          websites.
-        </Typography>
-      </Center>
-      <Center>
-        {/* <DimensionContainer maxWidth="fit-content" margin="auto">
-          <Card>
-            <div>Get In Contact</div>
-            <div>https://www.linkedin.com/in/steven-van-blerk/</div>
-            <div>stevenvanblerkrsa@gmail.com</div>
-            <div>Introduction</div>
-            <div>Work Experience</div>
-            <div>Education</div>
-            <div>Areas of Expertise</div>
-            <div>Other Qualities</div>
-          </Card>
-        </DimensionContainer> */}
-      </Center>
-      {/* TECH STACK */}
-      <Subtitle color={colors.SMOKE}>Tech Stack</Subtitle>
-      <DimensionContainer maxWidth="fit-content" margin="auto">
-        <FlowingGrid
-          justifyContent="center"
-          columnMaxWidth="300px"
-          gridGap="1rem"
-          maxColumns="4"
-        >
-          {techStack.map((entry, i) => (
-            <TechCard key={i} padding="1rem">
-              <VContainer justifyContent="space-evenly" height="100%">
-                <CardTitle color={colors.SMOKE}>{entry.title}</CardTitle>
-                <Center>
-                  <HoveringContainer
-                    displacement={4}
-                    delay={`0.${(i % 4) * 2}`}
-                  >
-                    <img src={entry.img} height="60" />
-                  </HoveringContainer>
-                </Center>
-                <Typography color={colors.SMOKE}>
-                  {entry.years === 1 ? "1 Year" : `${entry.years} Years`}
-                </Typography>
-                <Center>
-                  <PictorialBar rating={entry.skill} />
-                </Center>
-              </VContainer>
-            </TechCard>
-          ))}
-        </FlowingGrid>
-      </DimensionContainer>
-      {/* GET IN TOUCH */}
+      <VContainer gridGap="1rem" padding="0 1.5rem">
+        <PageTitle>Steven van Blerk</PageTitle>
+        {/* SUMMARY */}
+        <Center>
+          <Typography maxWidth="700px">
+            I am a Frontend Developer from Cape Town using JavaScript and React.
+            I have a passion for developing high calibre, interactive, robust
+            websites.
+          </Typography>
+        </Center>
 
-      <Center margin="1.5rem auto">
-        <VContainer gridGap="0.5rem">
-          <Subtitle>Get In Touch</Subtitle>
-          <a href="www.linkedin.com/in/steven-van-blerk">
-            <Typography textDecoration="underline">
-              www.linkedin.com/in/steven-van-blerk
-            </Typography>
-          </a>
-          <a href="mailto:stevenvanblerkrsa@gmail.com">
-            <Typography textDecoration="underline">
-              stevenvanblerkrsa@gmail.com
-            </Typography>
-          </a>
-          <Typography>Mobile: +27 76 885 4323</Typography>
-
-          <Typography>Cape Town, South Africa</Typography>
-          <TestButton>
-            <Typography color={colors.BLACK}>download cv</Typography>
-          </TestButton>
+        {/* TECH STACK */}
+        <DimensionContainer maxWidth="fit-content" margin="auto">
+          <FlowingGrid
+            justifyContent="center"
+            columnMaxWidth="300px"
+            gridGap="1rem"
+            maxColumns="4"
+          >
+            {techStack.map((entry, i) => (
+              <TechCard key={i} padding="1rem">
+                <VContainer justifyContent="space-evenly" height="100%">
+                  <CardTitle color={colors.SMOKE}>{entry.title}</CardTitle>
+                  <Center>
+                    <HoveringContainer
+                      displacement={4}
+                      delay={`0.${(i % 4) * 2}`}
+                    >
+                      <img src={entry.img} height="60" />
+                    </HoveringContainer>
+                  </Center>
+                  <Typography color={colors.SMOKE}>
+                    {entry.years === 1 ? "1 Year" : `${entry.years} Years`}
+                  </Typography>
+                  <Center>
+                    <PictorialBar rating={entry.skill} />
+                  </Center>
+                </VContainer>
+              </TechCard>
+            ))}
+          </FlowingGrid>
+        </DimensionContainer>
+        {/* WORK EXPERIENCE */}
+        <Subtitle color={colors.SMOKE}>WORK EXPERIENCE</Subtitle>
+        {/* mainboard */}
+        <VContainer alignItems="center">
+          <CardTitle>Mainboard</CardTitle>
+          <Typography fontStyle="italic">Mar 2021 - Present</Typography>
+          <Typography maxWidth="700px">
+            My current work utilises Frontend React JS to build websites for
+            businesses of clients. Standard features of these sites include well
+            polished landing pages, user input forms, news feeds, social media
+            integration, and catalogues (CSS Grid and Flexbox).
+          </Typography>
         </VContainer>
-      </Center>
+        {/* saeon */}
+        <VContainer alignItems="center">
+          <CardTitle>SAEON</CardTitle>
+          <Typography fontStyle="italic">Oct 2019 - Feb 2021</Typography>
+          <Typography maxWidth="700px">
+            I was employed as a Frontend React JS Developer though it is more
+            accurate to say my work was Full Stack. Most of my work allowed
+            researchers to manage and view data. This included highly detailed
+            and interactive visual charts, input forms, and an interface to
+            allow users to query databases with SQL.
+          </Typography>
+        </VContainer>
+        {/* brainwave */}
+        <VContainer alignItems="center">
+          <CardTitle>Brainwave Projects</CardTitle>
+          <Typography fontStyle="italic">Jun 2018 - Sept 2019</Typography>
+          <Typography maxWidth="700px">
+            The majority of my work was Back-end in C#. and included automating
+            data report building, usually from MS SQL to a webpage or an Excel
+            export. Other work included an e-Catalogue site and a call centre
+            dialler.
+          </Typography>
+        </VContainer>
+
+        {/* EDUCATION */}
+        <Center margin="1.5rem auto">
+          <Subtitle margin="0 0 1rem 0" color={colors.SMOKE}>
+            EDUCATION
+          </Subtitle>
+          {/* mainboard */}
+          <VContainer alignItems="center">
+            <CardTitle>University of the Western Cape</CardTitle>
+            <Typography fontStyle="italic">Jan 2015 - Dec 2018</Typography>
+            <Typography maxWidth="700px">
+              Bachelor of Science, Physics
+            </Typography>
+          </VContainer>
+        </Center>
+        {/* GET IN TOUCH */}
+
+        <Center margin="1.5rem auto">
+          <VContainer gridGap="0.5rem">
+            <Subtitle>Get In Touch</Subtitle>
+            <a href="www.linkedin.com/in/steven-van-blerk">
+              <Typography textDecoration="underline">
+                www.linkedin.com/in/steven-van-blerk
+              </Typography>
+            </a>
+            <a href="mailto:stevenvanblerkrsa@gmail.com">
+              <Typography textDecoration="underline">
+                stevenvanblerkrsa@gmail.com
+              </Typography>
+            </a>
+            <Typography>Mobile: +27 76 885 4323</Typography>
+
+            <Typography>Cape Town, South Africa</Typography>
+            <TestButton>
+              <Typography color={colors.BLACK}>download cv</Typography>
+            </TestButton>
+          </VContainer>
+        </Center>
+      </VContainer>
     </>
   );
 };

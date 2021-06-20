@@ -1,10 +1,12 @@
-import { Container } from "/components";
+import { Container, Typography } from "/components";
 
 export const UnderConstruction = () => {
   return (
     <>
       <Container margin="1.5rem">
-        Under Construction. Check back soon!
+        <Typography color="#FAC533">
+          Under Construction. Check back soon for more!
+        </Typography>
       </Container>
     </>
   );

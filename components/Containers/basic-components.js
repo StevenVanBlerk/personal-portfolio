@@ -24,6 +24,8 @@ export const Container = styled.div`
 
   grid-gap: ${({ gridGap }) => gridGap};
   justify-content: ${({ justifyContent }) => justifyContent};
+  align-content: ${({ alignContent }) => alignContent};
+  align-items: ${({ alignItems }) => alignItems};
   justify-self: ${({ justifySelf }) => justifySelf};
   place-content: ${({ placeContent }) => placeContent};
   background: ${({ background }) => background};
