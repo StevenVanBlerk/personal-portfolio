@@ -1,0 +1,93 @@
+.pixel-canvas {
+  margin: auto;
+  background-color: #f0f0f0;
+  width: 90%;
+  height: 800px;
+}
+
+/* .dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+/* Canvas */
+.pixel-canvas--canvas {
+  background-color: white;
+  display: inline;
+  /* grid-template-columns: repeat(10, 1fr); */
+  /* grid-template-rows: repeat(10, 1fr); */
+  max-width: 500px;
+  max-height: 500px;
+  margin: auto;
+}
+.pixel-canvas--canvas--square {
+  border: 1px dotted black;
+  color: white;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+}
+
+/* Palette */
+.pixel-canvas--color-palette {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.pixel-canvas--color-palette--color {
+  width: 48px;
+  height: 48px;
+  color: white;
+  border: 1px dotted black;
+}
+
+.not-held {
+  position: initial;
+}
+.held {
+  position: fixed;
+  transform: scale(2) translate(-12px, -12px);
+
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.75);
+  opacity: 0.3;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.released {
+  position: absolute;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Colors */
+
+.red {
+  background-color: pink;
+  color: black;
+}
+.green {
+  background-color: lightgreen;
+  color: black;
+}
+.blue {
+  background-color: lightblue;
+  color: black;
+}
+.white {
+  background-color: white;
+  color: black;
+}
+.black {
+  background-color: black;
+  color: white;
+}
+.yellow {
+  background-color: black;
+  color: white;
+}
