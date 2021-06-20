@@ -1,7 +1,7 @@
 import "/styles/globals.css";
-
 import styled from "styled-components";
 import { colors } from "/constants/colors";
+import { StarryBackground } from "/components";
 
 const routes = [
   { label: "Home", path: "/", iconPath: "/icons/home.svg" },
@@ -45,7 +45,9 @@ const Main = styled.main`
 function MyApp({ Component, pageProps }) {
   return (
     <Main>
-      <Component {...pageProps} />
+      <StarryBackground>
+        <Component {...pageProps} />
+      </StarryBackground>
     </Main>
   );
 }
