@@ -34,6 +34,7 @@ export const StyledComponent = styled.div`
   color: ${({ color }) => color};
   line-height: ${({ lineHeight }) => lineHeight};
   text-transform: ${({ textTransform }) => textTransform};
+  text-decoration: ${({ textDecoration }) => textDecoration};
   word-wrap: ${({ wordWrap }) => wordWrap};
   vertical-align: ${({ verticalAlign }) => verticalAlign};
 

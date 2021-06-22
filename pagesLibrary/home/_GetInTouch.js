@@ -7,26 +7,29 @@ export const GetInTouch = () => {
     <>
       <VContainer gridGap="0.5rem">
         <Header2>Get In Touch</Header2>
-        <a href="https://www.linkedin.com/in/steven-van-blerk" target="_blank">
+        <Anchor
+          href="https://www.linkedin.com/in/steven-van-blerk"
+          target="_blank"
+        >
           <Typography textDecoration="underline">
             www.linkedin.com/in/steven-van-blerk
           </Typography>
-        </a>
-        <a href="mailto:stevenvanblerkrsa@gmail.com">
+        </Anchor>
+        <Anchor href="mailto:stevenvanblerkrsa@gmail.com">
           <Typography textDecoration="underline">
             stevenvanblerkrsa@gmail.com
           </Typography>
-        </a>
+        </Anchor>
         <Typography>Mobile: +27 76 885 4323</Typography>
 
         <Typography>Cape Town, South Africa</Typography>
-        <CVButton>
-          <a href="/StevenVanBlerkCV.pdf" download="Steven van Blerk CV">
+        <Anchor href="/StevenVanBlerkCV.pdf" download="Steven van Blerk CV">
+          <CVButton>
             <Typography color={colors.BLACK} fontFamily="Rajdhani-Regular">
               download cv
             </Typography>
-          </a>
-        </CVButton>
+          </CVButton>
+        </Anchor>
       </VContainer>
     </>
   );
@@ -44,4 +47,9 @@ const CVButton = styled((props) => <MinimalButton {...props} />)`
   padding: 0 15px;
   border-radius: 40px;
   cursor: pointer;
+`;
+
+const Anchor = styled.a`
+  width: fit-content;
+  margin: auto;
 `;
