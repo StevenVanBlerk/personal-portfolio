@@ -1,49 +1,11 @@
 import styled from "styled-components";
-import { colors } from "../../constants/colors";
+import { colors } from "/constants/colors";
+import { StyledComponent } from "/components";
 
 //Flexible container that acts as the foundation for all containers
-export const Container = styled.div`
-  display: ${({ display }) => display};
-  position: ${({ position }) => position};
-  height: ${({ height }) => height};
-  width: ${({ width }) => width};
-  max-height: ${({ maxHeight }) => maxHeight};
-  max-width: ${({ maxWidth }) => maxWidth};
-  min-height: ${({ minHeight }) => minHeight};
-  min-width: ${({ minWidth }) => minWidth};
-
-  margin: ${({ margin }) => margin};
-  padding: ${({ padding }) => padding};
-  border: ${({ border }) => border};
-  border-radius: ${({ borderRadius }) => borderRadius};
-
-  border-top: ${({ borderTop }) => borderTop};
-  border-right: ${({ borderRight }) => borderRight};
-  border-bottom: ${({ borderBottom }) => borderBottom};
-  border-left: ${({ borderLeft }) => borderLeft};
-
-  grid-gap: ${({ gridGap }) => gridGap};
-  justify-content: ${({ justifyContent }) => justifyContent};
-  align-content: ${({ alignContent }) => alignContent};
-  align-items: ${({ alignItems }) => alignItems};
-  justify-self: ${({ justifySelf }) => justifySelf};
-  place-content: ${({ placeContent }) => placeContent};
-  background: ${({ background }) => background};
-  color: ${({ color }) => color};
-  opacity: ${({ opacity }) => opacity};
-  text-align: ${({ textAlign }) => textAlign};
-  font-size: ${({ fontSize }) => fontSize};
-  vertical-align: ${({ verticalAlign }) => verticalAlign};
-
-  top: ${({ top }) => top};
-  bottom: ${({ bottom }) => bottom};
-  left: ${({ left }) => left};
-  right: ${({ right }) => right};
-
-  overflow: ${({ overflow }) => overflow};
-  overflow-x: ${({ overflowX }) => overflowX};
-  overflow-y: ${({ overflowY }) => overflowY};
-`;
+export const Container = styled((props) => (
+  <StyledComponent as="div" {...props} />
+))``;
 
 //------GRIDS------\\
 export const Grid = styled(Container)`
@@ -55,7 +17,6 @@ export const FlowingGrid = styled(Grid)`
     `repeat(auto-fit, minmax(0px, ${columnMaxWidth}))`};
 
   grid-gap: ${({ gridGap }) => gridGap || "1rem"};
-
   /* using max-width to allow for specifying a max column count (optional) */
   max-width: ${({ maxColumns, columnMaxWidth, gridGap = "1rem" }) =>
     maxColumns

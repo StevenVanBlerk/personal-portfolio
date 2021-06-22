@@ -9,6 +9,7 @@ export { PictorialBar } from "./Charts/PictorialBar";
 export { ScrollToTopButton } from "./Navigation/ScrollToTopButton";
 export { StarryBackground } from "./Miscellaneous/StarryBackground";
 export { UnderConstruction } from "./Miscellaneous/UnderConstruction";
+export { StyledComponent } from "./StyledComponent";
 export * from "./Typography/basic-components";
 export * from "./Containers/basic-components";
 export * from "./Buttons/basic-components";

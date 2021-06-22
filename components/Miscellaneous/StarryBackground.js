@@ -1,16 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { colors } from "../../constants/colors";
-
-const StarsContainer = styled.div`
-  background: ${colors.DARK_CHARCOAL};
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  z-index: 0;
-`;
+import { colors } from "/constants/colors";
+import { Container } from "/components";
 
 export const StarryBackground = ({
   starCount = 1000,
@@ -89,7 +80,17 @@ export const StarryBackground = ({
           })}
         </motion.svg>
       </StarsContainer>
-      <div style={{ position: "relative" }}>{children}</div>
+      <Container position="relative">{children}</Container>
     </>
   );
 };
+
+const StarsContainer = styled((props) => <Container {...props} />)`
+  background: ${colors.DARK_CHARCOAL};
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 0;
+`;

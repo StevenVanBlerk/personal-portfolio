@@ -1,11 +1,11 @@
 import styled from "styled-components";
+import { MinimalButton } from "/components";
 import {
   motion,
   useSpring,
   useTransform,
   useViewportScroll,
 } from "framer-motion";
-import { StickyButton } from "../../components/index";
 
 //https://www.framer.com/api/motion/examples/
 //https://codesandbox.io/s/framer-motion-viewport-scroll-and-svg-path-animation-mwi35?fontsize=14&module=/src/Example.tsx&file=/src/styles.css
@@ -14,21 +14,8 @@ import { StickyButton } from "../../components/index";
   rocket ship idles at bottom right. As scroll progress increases, rocket gets closer to "Lift Off" with shaking and smoke animations. 
   Onclick => rocket launches and user is scrolled to the top (maybe a hover while scrolling then a landing)
 */
-const buttonSize = 50;
-
-const Container = styled.div`
-  position: relative;
-  width: ${buttonSize}px;
-  height: ${buttonSize}px;
-`;
-const Icon = styled.img`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  max-height: ${buttonSize} / 2;
-  max-width: ${buttonSize} / 2;
-`;
+const buttonSize = "50px";
+const buttonSizeNum = 50;
 
 export const ScrollToTopButton = ({
   top,
@@ -62,9 +49,9 @@ export const ScrollToTopButton = ({
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       >
-        <Container>
-          <Icon height={buttonSize / 2} src={icon} />
-          <svg viewBox={`0 0 ${buttonSize} ${buttonSize}`}>
+        <Container position="relative" width={buttonSize} height={buttonSize}>
+          <Icon height={buttonSizeNum / 2} src={icon} />
+          <svg viewBox={`0 0 ${buttonSizeNum} ${buttonSizeNum}`}>
             <motion.path
               fill="none"
               strokeWidth="3"
@@ -85,3 +72,23 @@ export const ScrollToTopButton = ({
     </motion.div>
   );
 };
+
+const StickyButton = styled((props) => <MinimalButton {...props} />)`
+  position: fixed;
+  border-radius: ${({ borderRadius }) => borderRadius || "50%"};
+  visibility: ${({ visible }) => (visible ? "visible" : "hidden")};
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
+  transition: transform 0.2s, visibility 0.2s, opacity 0.2s;
+  :hover {
+    transform: scale(1.2);
+  }
+`;
+const Container = styled.div``;
+const Icon = styled.img`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-height: ${buttonSize} / 2;
+  max-width: ${buttonSize} / 2;
+`;
