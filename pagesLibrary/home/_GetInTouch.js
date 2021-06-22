@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { Header2, Typography, VContainer, MinimalButton } from "/components";
+import {
+  Header2,
+  Typography,
+  VContainer,
+  MinimalButton,
+  HyperlinkButton,
+} from "/components";
 import { colors } from "/constants/colors";
 
 export const GetInTouch = () => {
@@ -7,19 +13,14 @@ export const GetInTouch = () => {
     <>
       <VContainer gridGap="0.5rem">
         <Header2>Get In Touch</Header2>
-        <Anchor
+        <HyperlinkButton
           href="https://www.linkedin.com/in/steven-van-blerk"
-          target="_blank"
-        >
-          <Typography textDecoration="underline">
-            www.linkedin.com/in/steven-van-blerk
-          </Typography>
-        </Anchor>
-        <Anchor href="mailto:stevenvanblerkrsa@gmail.com">
-          <Typography textDecoration="underline">
-            stevenvanblerkrsa@gmail.com
-          </Typography>
-        </Anchor>
+          label="www.linkedin.com/in/steven-van-blerk"
+        />
+        <HyperlinkButton
+          href="mailto:stevenvanblerkrsa@gmail.com"
+          label="stevenvanblerkrsa@gmail.com"
+        />
         <Typography>Mobile: +27 76 885 4323</Typography>
 
         <Typography>Cape Town, South Africa</Typography>
@@ -47,6 +48,14 @@ const CVButton = styled((props) => <MinimalButton {...props} />)`
   padding: 0 15px;
   border-radius: 40px;
   cursor: pointer;
+
+  transition: all 0.1s;
+  :hover {
+    transform: scale(1.03);
+  }
+  :active {
+    transform: scale(0.98);
+  }
 `;
 
 const Anchor = styled.a`

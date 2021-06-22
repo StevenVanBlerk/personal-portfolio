@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
-const Container = styled(motion.div)`
+import { Container } from "/components";
+const MyContainer = styled((props) => <Container as={motion.div} {...props} />)`
   height: fit-content;
   width: fit-content;
+  margin: auto;
 `;
 
 export const HoveringContainer = ({
@@ -14,13 +15,13 @@ export const HoveringContainer = ({
   ...otherProps
 }) => {
   return (
-    <Container
+    <MyContainer
       initial={{ y: -displacement }}
       animate={{ y: [-displacement, displacement, -displacement] }}
       transition={{ repeat: Infinity, duration: duration, delay: delay }}
       {...otherProps}
     >
       {children}
-    </Container>
+    </MyContainer>
   );
 };
