@@ -9,7 +9,7 @@ export const UnderConstruction = () => {
           fontFamily="Rajdhani-Regular"
           fontSize="20px"
         >
-          Under Construction. Check back soon for more!
+          Under Construction. come back soon for more!
         </Typography>
       </Container>
     </>

@@ -6,14 +6,14 @@ export const Typography = styled((props) => (
 ))`
   margin: ${({ margin }) => margin || 0};
   font-family: ${({ fontFamily }) =>
-    fontFamily || "Rajdhani-Light, system-ui, sans-serif"};
+    fontFamily || "Rajdhani-Regular, system-ui, sans-serif"};
   color: ${({ color }) => color || colors.SMOKE};
   font-size: ${({ fontSize }) => fontSize || "19px"};
 `;
 
 export const Header1 = styled((props) => <Typography as="h1" {...props} />)`
   text-align: center;
-  font-family: ${({ fontFamily }) => fontFamily || "Rajdhani-Regular"};
+  font-family: ${({ fontFamily }) => fontFamily || "Rajdhani-Bold"};
   font-size: 36px;
   margin: 0;
 `;
