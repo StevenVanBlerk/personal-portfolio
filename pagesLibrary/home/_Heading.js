@@ -13,9 +13,9 @@ export const Heading = () => {
         {/* <UnderConstruction /> */}
         <Header1>STEVEN VAN BLERK</Header1>
         <Typography>
-          I am a Frontend Developer from Cape Town using JavaScript and React. I
-          have a passion for developing high calibre, interactive, and robust
-          websites.
+          I am a Frontend Developer from Cape Town, South Africa using
+          JavaScript and React. I have a passion for developing high calibre,
+          interactive, and robust websites.
         </Typography>
       </VContainer>
     </>
