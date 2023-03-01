@@ -29,12 +29,14 @@ export const StyledComponent = styled.div`
   background: ${({ background }) => background};
   opacity: ${({ opacity }) => opacity};
 
-  text-align: ${({ textAlign }) => textAlign};
   font-size: ${({ fontSize }) => fontSize};
-  color: ${({ color }) => color};
-  line-height: ${({ lineHeight }) => lineHeight};
+  font-style: ${({ fontStyle }) => fontStyle};
+  text-align: ${({ textAlign }) => textAlign};
   text-transform: ${({ textTransform }) => textTransform};
   text-decoration: ${({ textDecoration }) => textDecoration};
+  color: ${({ color }) => color};
+  line-height: ${({ lineHeight }) => lineHeight};
+
   word-wrap: ${({ wordWrap }) => wordWrap};
   vertical-align: ${({ verticalAlign }) => verticalAlign};
 

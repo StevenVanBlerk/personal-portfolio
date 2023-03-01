@@ -25,7 +25,9 @@ const Home = () => {
 
 export default Home;
 
-/* sheldon's idea: star wars scrolling effect for text (could be timeline)
+/* Potential TO-DOs:
+
+sheldon's idea: star wars scrolling effect for text (could be timeline)
       page side navigation thing could be a star constellation instead of a
       branch
       <br />
@@ -36,3 +38,7 @@ export default Home;
 /*Rating system idea:
       a bar slider the user can drag to indicate their satisfaction with product/service. bar slider value (0 - 100) determines shape of svg above
       slider. 100= big smile, 0= sad face */
+
+/** Embed Spotify to home page. Allow play of floating through space / interstellar soundtrack
+ 
+ *  */

@@ -3,7 +3,6 @@ import {
   HoveringContainer,
   Typography,
   DimensionContainer,
-  PictorialBar,
   VContainer,
   Container,
   FlowingGrid,
@@ -37,9 +36,6 @@ export const TechStack = () => {
                 <Typography color={colors.SMOKE} marginBottom="10px">
                   {entry.years === 1 ? "1 Year" : `${entry.years} Years`}
                 </Typography>
-                <Container width="fit-content" margin="auto">
-                  <PictorialBar rating={entry.skill} />
-                </Container>
               </VContainer>
             </TechCard>
           ))}
@@ -59,26 +55,24 @@ export const TechCard = styled(Container)`
 `;
 
 const techStack = [
-  { img: "/icons/tech/react.svg", title: "React", years: 2, skill: 5 },
+  { img: "/icons/tech/react.svg", title: "React", years: 4 },
   {
     img: "/icons/tech/javascript.svg",
     title: "JavaScript",
-    years: 3,
-    skill: 5,
+    years: 5,
   },
-  { img: "/icons/tech/node.svg", title: "Node", years: 2, skill: 3 },
-  { img: "/icons/tech/html.svg", title: "HTML", years: 3, skill: 5 },
-  { img: "/icons/tech/css.svg", title: "CSS", years: 3, skill: 5 },
-  { img: "/icons/tech/docker.svg", title: "Docker", years: 2, skill: 4 },
-  { img: "/icons/tech/git.svg", title: "Git", years: 3, skill: 5 },
-  { img: "/icons/tech/mssql.svg", title: "MS SQL", years: 3, skill: 5 },
+  { img: "/icons/tech/html.svg", title: "HTML", years: 5 },
+  { img: "/icons/tech/css.svg", title: "CSS", years: 5 },
+  { img: "/icons/tech/git.svg", title: "Git", years: 5 },
+  { img: "/icons/tech/node.svg", title: "Node", years: 2 },
+  { img: "/icons/tech/docker.svg", title: "Docker", years: 3 },
+  { img: "/icons/tech/mssql.svg", title: "MS SQL", years: 3 },
   {
     img: "/icons/tech/postgresql.svg",
     title: "PostgreSQL",
     years: 3,
-    skill: 5,
   },
-  { img: "/icons/tech/csharp.svg", title: "C#", years: 2, skill: 4 },
-  { img: "/icons/tech/unity.svg", title: "Unity", years: 1, skill: 2 },
-  { img: "/icons/tech/jira.svg", title: "Jira", years: 3, skill: 5 },
+  { img: "/icons/tech/csharp.svg", title: "C#", years: 2 },
+  { img: "/icons/tech/unity.svg", title: "Unity", years: 1 },
+  { img: "/icons/tech/jira.svg", title: "Jira", years: 5 },
 ];

@@ -12,15 +12,27 @@ export const WorkExperience = () => {
     <>
       <VContainer gridGap="1rem" maxWidth="700px" margin="auto">
         <Header2 color={colors.SMOKE}>WORK EXPERIENCE</Header2>
+        {/* OfferZen */}
+        <Container alignItems="center">
+          <Header3>OfferZen</Header3>
+          <Typography fontStyle="italic">Sep 2021 - Present</Typography>
+          <Typography>
+            My work involves maintaining a recruitment marketplace. The product
+            includes a backend app built upon Ruby and GraphQL, and a collection
+            of React JS SPAs. I work closely with the design team to
+            continuously improve the frontend of the product. My current
+            aspiration is to help usher in a design system.
+          </Typography>
+        </Container>
         {/* mainboard */}
         <Container alignItems="center">
           <Header3>Mainboard</Header3>
-          <Typography fontStyle="italic">Mar 2021 - Present</Typography>
+          <Typography fontStyle="italic">Mar 2021 - Aug 2021</Typography>
           <Typography>
-            My current work utilises Frontend React JS to build websites for
-            businesses of clients. Standard features of these sites include well
-            polished landing pages, user input forms, news feeds, social media
-            integration, and catalogues (CSS Grid and Flexbox).
+            My work utilised Frontend React JS to build websites for clients.
+            Standard features of these sites included highly polished landing
+            pages, user input forms, news feeds, social media integration, and
+            catalogues. I made a lot of use out of CSS Grid and Flexbox.
           </Typography>
         </Container>
         {/* saeon */}

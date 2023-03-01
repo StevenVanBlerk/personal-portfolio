@@ -10,7 +10,7 @@ export const Heading = () => {
   return (
     <>
       <VContainer gridGap="1rem" maxWidth="700px" margin="auto">
-        <UnderConstruction />
+        {/* <UnderConstruction /> */}
         <Header1>STEVEN VAN BLERK</Header1>
         <Typography>
           I am a Frontend Developer from Cape Town using JavaScript and React. I
