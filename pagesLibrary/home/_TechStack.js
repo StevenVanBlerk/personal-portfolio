@@ -55,12 +55,12 @@ export const TechCard = styled(Container)`
 `;
 
 const techStack = [
-  { img: "/icons/tech/react.svg", title: "React", years: 4 },
   {
     img: "/icons/tech/javascript.svg",
     title: "JavaScript",
     years: 5,
   },
+  { img: "/icons/tech/react.svg", title: "React", years: 4 },
   { img: "/icons/tech/html.svg", title: "HTML", years: 5 },
   { img: "/icons/tech/css.svg", title: "CSS", years: 5 },
   { img: "/icons/tech/git.svg", title: "Git", years: 5 },
