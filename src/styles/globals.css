@@ -2,7 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* font-family: 'Rajdhani-Medium'; */
+  color: #f0f0f0; /* TO-DO: replace with design system enum*/
+  font-family: Rajdhani-Regular;
 }
 html {
   background: #1e1e1e;
