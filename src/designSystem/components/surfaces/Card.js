@@ -17,15 +17,17 @@ const OuterCard = styled.div`
   background: ${colors.DARK_CHARCOAL};
   border: 5px solid ${colors.LIGHT_CHARCOAL};
   border-radius: 3px;
+  width: ${({ fill }) => (fill ? '100%' : 'fit-content')};
+  margin: auto;
 `
 
 const Footer = styled.footer`
   margin-top: auto;
 `
 
-export const Card = ({ header, footer, gapSize, children }) => {
+export const Card = ({ header, footer, gapSize, fill, children }) => {
   return (
-    <OuterCard gapSize={gapSize}>
+    <OuterCard gapSize={gapSize} fill={fill}>
       {!!header && <Header3>{header}</Header3>}
       {!!children && <section>{children}</section>}
       {!!footer && <Footer>{footer}</Footer>}

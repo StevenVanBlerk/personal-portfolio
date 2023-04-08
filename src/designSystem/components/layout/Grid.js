@@ -17,7 +17,7 @@ export const Grid = styled.div`
 
   //minmax only matters for extreme edge case of extremely narrow screen
   grid-template-columns: ${({ columnMaxWidth = '250px' }) =>
-    `repeat(auto-fit, minmax(0px, 250px))`};
+    `repeat(auto-fit, minmax(0px, ${columnMaxWidth}))`};
 
   /* using max-width to allow for specifying a max column count (optional) */
   max-width: ${({ maxColumns, columnMaxWidth = '250px', size }) =>

@@ -9,6 +9,7 @@ export const TechStack = () => {
         <Card
           key={entry.title}
           gapSize="huge"
+          fill
           header={entry.title}
           footer={
             <Text>{entry.years === 1 ? '1 Year' : `${entry.years} Years`}</Text>
