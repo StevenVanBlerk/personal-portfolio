@@ -14,6 +14,8 @@ export { BurgerMenu } from './Navigation/BurgerMenu/BurgerMenu'
 export { BurgerMenu2 } from './Navigation/BurgerMenu2/BurgerMenu2'
 export { ContentsBar } from './Navigation/ContentsBar'
 export { ScrollToTopButton } from './Navigation/ScrollToTopButton'
+// Surfaces
+export { CreativeCodingCard } from './Surfaces/CreativeCodingCard'
 // Typography
 
 export * from './typography/basic-components'

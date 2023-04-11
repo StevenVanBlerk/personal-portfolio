@@ -16,7 +16,7 @@ const Main = styled.main`
 function MyApp({ Component, pageProps }) {
   return (
     <Main>
-      <StarryBackground>
+      <StarryBackground enabled={Component.name !== 'CreativeCoding'}>
         <Component {...pageProps} />
       </StarryBackground>
     </Main>
