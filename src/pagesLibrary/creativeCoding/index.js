@@ -1,6 +1,6 @@
-import { BuzzingBee } from './_BuzzingBee'
-import { Card, FlexGrid, VerticalGrid } from '@/designSystem'
-import { P5Demo } from './_P5Demo'
+import { BuzzingBee } from './P5Intro/_BuzzingBee'
+import { Card, VerticalGrid } from '@/designSystem'
+import { P5Demo } from './P5Intro/_P5Demo'
 const CreativeCoding = () => {
   return (
     <div>
