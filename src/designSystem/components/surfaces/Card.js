@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header3, colors } from '@/designSystem'
+import { Header3, Text, colors } from '@/designSystem'
 
 const OuterCard = styled.div`
   display: grid;
@@ -25,10 +25,18 @@ const Footer = styled.footer`
   margin-top: auto;
 `
 
-export const Card = ({ header, footer, gapSize, fill, children }) => {
+export const Card = ({
+  header,
+  subheader,
+  footer,
+  gapSize,
+  fill,
+  children,
+}) => {
   return (
     <OuterCard gapSize={gapSize} fill={fill}>
       {!!header && <Header3>{header}</Header3>}
+      {!!subheader && <Text>{subheader}</Text>}
       {!!children && <section>{children}</section>}
       {!!footer && <Footer>{footer}</Footer>}
     </OuterCard>

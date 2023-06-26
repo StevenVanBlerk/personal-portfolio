@@ -1,17 +1,26 @@
-import { BuzzingBee } from './_BuzzingBee'
-import { Card, FlexGrid, VerticalGrid } from '@/designSystem'
-import { P5Demo } from './_P5Demo'
+import { BuzzingBee } from './P5Intro/BuzzingBee'
+import { VerticalGrid } from '@/designSystem'
+import MatterSphereCreator from './MatterSphereCreator'
+import { CreativeCodingCard } from '@/bespokeSystem/components'
+
 const CreativeCoding = () => {
   return (
     <div>
       Creative coding showcase
       <VerticalGrid gapSize="large">
-        <Card header="Buzzing bee (perlin noise)">
+        <CreativeCodingCard
+          header="Making matter"
+          subheader="drag along the canvas"
+        >
+          <MatterSphereCreator />
+        </CreativeCodingCard>
+
+        <CreativeCodingCard
+          header="Buzzing bee"
+          subheader="a 2D perlin noise demo"
+        >
           <BuzzingBee />
-        </Card>
-        <Card header="Buzzing bee (perlin noise)">
-          <P5Demo />
-        </Card>
+        </CreativeCodingCard>
       </VerticalGrid>
     </div>
   )
