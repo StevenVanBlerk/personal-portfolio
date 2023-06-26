@@ -1,6 +1,5 @@
 import { BuzzingBee } from './P5Intro/BuzzingBee'
-import { Card, VerticalGrid } from '@/designSystem'
-// import LightSwitchCord from './LightSwitchCord'
+import { VerticalGrid } from '@/designSystem'
 import MatterSphereCreator from './MatterSphereCreator'
 import { CreativeCodingCard } from '@/bespokeSystem/components'
 
@@ -9,10 +8,6 @@ const CreativeCoding = () => {
     <div>
       Creative coding showcase
       <VerticalGrid gapSize="large">
-        {/* <Card header="Light switch" subheader="pull the cord">
-          <LightSwitchCord />
-        </Card> */}
-
         <CreativeCodingCard
           header="Making matter"
           subheader="drag along the canvas"
