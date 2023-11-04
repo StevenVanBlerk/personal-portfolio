@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ScrollToTopButton, VContainer, Container } from '@/bespokeSystem/components'
+import { ScrollToTopButton, VContainer, Container, GravityCalibrationButton } from '@/bespokeSystem/components'
 import { colors } from '@/designSystem/constants/colors'
 import { Heading } from './_Heading'
 import { GetInTouch } from './_GetInTouch'
@@ -10,7 +10,8 @@ import { Education } from './_Education'
 const Home = () => {
   return (
     <>
-      <ScrollToTopButton />
+    test
+      {/* <ScrollToTopButton />
       <VContainer gridGap="3rem" padding="1.5rem">
         <Heading />
         {/* <a href="/creativeCoding">Creative coding showcase</a> */}
@@ -19,7 +20,8 @@ const Home = () => {
         <WorkExperience />
         <Education />
         <GetInTouch />
-      </VContainer>
+        <GravityCalibrationButton />
+      </VContainer> */}
     </>
   )
 }
@@ -34,8 +36,7 @@ export default Home
 /** Potential TO-DOs:
 
 sheldon's idea: 
-      - page side navigation thing could be a star constellation instead of a
-      branch
+      - page side navigation thing could be a star constellation
       
       - Page: My music (Glass Animals, Oliver Tree, OK:GO, good music
       videos), youtube API integration demo */

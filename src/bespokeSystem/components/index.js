@@ -1,5 +1,6 @@
 // Input
 export { HyperlinkButton } from './inputs/HyperlinkButton'
+export { GravityCalibrationButton } from './inputs/GravityCalibrationButton/GravityCalibrationButton'
 // Charts
 export { PictorialBar } from './Charts/PictorialBar'
 // Containers

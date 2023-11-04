@@ -1,6 +1,7 @@
 import { BuzzingBee } from './P5Intro/BuzzingBee'
 import { VerticalGrid } from '@/designSystem'
 import MatterSphereCreator from './MatterSphereCreator'
+import MatterHTMLCreator from './MatterHTMLCreator'
 import { CreativeCodingCard } from '@/bespokeSystem/components'
 
 const CreativeCoding = () => {
@@ -12,7 +13,8 @@ const CreativeCoding = () => {
           header="Making matter"
           subheader="drag along the canvas"
         >
-          <MatterSphereCreator />
+          {/* <MatterSphereCreator /> */}
+          <MatterHTMLCreator />
         </CreativeCodingCard>
 
         <CreativeCodingCard
