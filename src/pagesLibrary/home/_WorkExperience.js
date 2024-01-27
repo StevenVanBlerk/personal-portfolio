@@ -12,16 +12,29 @@ export const WorkExperience = () => {
     <>
       <VContainer gridGap="1rem" maxWidth="700px" margin="auto">
         <Header2 color={colors.SMOKE}>WORK EXPERIENCE</Header2>
+        {/* Revio */}
+        <Container alignItems="center">
+          <Header3>Revio</Header3>
+          <Typography fontStyle="italic">Nov 2023 - Present</Typography>
+          <Typography>
+            Revio is an Africa focused payment orchestration platform where I
+            form part of a small, tight knit engineering team. Since the team is
+            small, my responsibilities cover all aspects of frontend
+            development. My day to day tech includes NextJS, TypeScript, Redux,
+            Styled Components, React hook form, Storybook, Figma, and Cypress.
+          </Typography>
+        </Container>
         {/* OfferZen */}
         <Container alignItems="center">
           <Header3>OfferZen</Header3>
-          <Typography fontStyle="italic">Sep 2021 - Present</Typography>
+          <Typography fontStyle="italic">Sep 2021 - Sep 2023</Typography>
           <Typography>
-            My work involves maintaining a recruitment marketplace. The product
-            includes a backend app built upon Ruby and GraphQL, and a collection
-            of React JS SPAs. I work closely with the design team to
-            continuously improve the frontend of the product. My current
-            aspiration is to help usher in a design system.
+            My work involved maintaining a successful recruitment marketplace
+            built upon a collection of React JS SPAs. I worked closely with the
+            design team to continuously improve the frontend of the product. My
+            day to day tech included JavaScript, React, PropTypes, Redux,
+            Emotion, React hook form, React query, Storybook, Jest, React
+            testing library, Figma, and GraphQL.
           </Typography>
         </Container>
         {/* mainboard */}
@@ -32,7 +45,7 @@ export const WorkExperience = () => {
             My work utilised Frontend React JS to build websites for clients.
             Standard features of these sites included highly polished landing
             pages, user input forms, news feeds, social media integration, and
-            catalogues. I made a lot of use out of CSS Grid and Flexbox.
+            catalogues.
           </Typography>
         </Container>
         {/* saeon */}
@@ -44,7 +57,7 @@ export const WorkExperience = () => {
             accurate to say my work was Full Stack. Most of my work allowed
             researchers to manage and view data. This included highly detailed
             and interactive visual charts, input forms, and an interface to
-            allow users to query databases with SQL.
+            allow users to query databases via SQL.
           </Typography>
         </Container>
         {/* brainwave */}

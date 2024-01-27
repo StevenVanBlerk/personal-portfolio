@@ -1,11 +1,14 @@
-import { useState } from 'react'
-import { ScrollToTopButton, VContainer, Container } from '@/bespokeSystem/components'
-import { colors } from '@/designSystem/constants/colors'
-import { Heading } from './_Heading'
-import { GetInTouch } from './_GetInTouch'
-import { TechStack } from './_TechStack'
-import { WorkExperience } from './_WorkExperience'
-import { Education } from './_Education'
+import {
+  ScrollToTopButton,
+  VContainer,
+  Container,
+  UnderConstruction,
+} from "@/bespokeSystem/components";
+import { Heading } from "./_Heading";
+import { GetInTouch } from "./_GetInTouch";
+import { TechStack } from "./_TechStack";
+import { WorkExperience } from "./_WorkExperience";
+import { Education } from "./_Education";
 
 const Home = () => {
   return (
@@ -13,6 +16,7 @@ const Home = () => {
       <ScrollToTopButton />
       <VContainer gridGap="3rem" padding="1.5rem">
         <Heading />
+        <UnderConstruction />
         {/* <a href="/creativeCoding">Creative coding showcase</a> */}
         {/* <a href="/designSystem">Design system</a> */}
         <TechStack />
@@ -21,10 +25,10 @@ const Home = () => {
         <GetInTouch />
       </VContainer>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
 /** DEFINITE TO-DOs
  * clean up public/icons folder
