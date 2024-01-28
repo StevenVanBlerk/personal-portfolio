@@ -13,8 +13,15 @@ export const CVButton = () => {
     </Anchor>
   );
 };
-
-const GreyButton = styled((props) => <MinimalButton {...props} />)`
+//styled((props) => <MinimalButton {...props} />)`
+const GreyButton = styled.button`
+  box-shadow: none;
+  cursor: pointer;
+  &:focus {
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
   display: flex;
   align-items: center;
   margin: auto;
