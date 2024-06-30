@@ -4,7 +4,7 @@ import { colors } from "@/designSystem/constants/colors";
 
 export const CVButton = () => {
   return (
-    <Anchor href="/StevenVanBlerkCV.pdf" download="Steven van Blerk CV">
+    <Anchor href="/CV - Steven van Blerk.pdf" download="CV - Steven van Blerk">
       <GreyButton>
         <Typography color={colors.BLACK} fontFamily="Rajdhani-Regular">
           download cv
