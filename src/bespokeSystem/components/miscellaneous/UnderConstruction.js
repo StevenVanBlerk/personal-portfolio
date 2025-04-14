@@ -11,7 +11,7 @@ export const UnderConstruction = () => {
           fontFamily="Rajdhani-Regular"
           fontSize="20px"
         >
-          UNDER CONSTRUCTION
+          UNDER RENOVATION
         </Typography>
         <Typography
           color="#FAC533"

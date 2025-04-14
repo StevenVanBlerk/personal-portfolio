@@ -12,12 +12,12 @@ export const WorkExperience = () => {
     <>
       <VContainer gridGap="1rem" maxWidth="700px" margin="auto">
         <Header2 color={colors.SMOKE}>WORK EXPERIENCE</Header2>
-        {/* Revio */}
+        {/* Precium */}
         <Container alignItems="center">
-          <Header3>Revio</Header3>
+          <Header3>Precium</Header3>
           <Typography fontStyle="italic">Nov 2023 - Present</Typography>
           <Typography>
-            Revio is an Africa focused payment orchestration platform where I
+            Precium is an Africa focused payment orchestration platform where I
             form part of a small, tight knit engineering team. Since the team is
             small, my responsibilities cover all aspects of frontend
             development. My day to day tech includes NextJS, TypeScript, Redux,
